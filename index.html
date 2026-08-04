@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Arena Foodpark</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/bebas-neue@latest/index.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/index.css" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Bebas Neue"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        colors: {
+          brand: '#FBBF24',
+          coal: '#09090B',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+
+  /* Parallax do hero */
+  .parallax-hero {
+    background-image:
+      linear-gradient(to bottom, rgba(9,9,11,.55), rgba(9,9,11,.35) 50%, rgba(9,9,11,1)),
+      url('https://image.qwenlm.ai/public_source/4b900bbd-2a0f-42e9-8392-304101c17e68/17ae99768-0cae-4788-a045-2814aa568e84.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media (max-width: 768px) {
+    .parallax-hero { background-attachment: scroll; }
+  }
+
+  /* Header ao rolar */
+  #header { transition: background-color .3s ease, border-color .3s ease, backdrop-filter .3s ease; border-bottom: 1px solid transparent; }
+  #header.scrolled { background-color: rgba(9,9,11,.9); backdrop-filter: blur(10px); border-bottom-color: rgba(39,39,42,.7); }
+
+  /* Revelar ao rolar */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.revealed { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+
+<body class="bg-coal text-zinc-100 antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="header" class="fixed inset-x-0 top-0 z-50">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#" class="flex items-center gap-2 font-display text-2xl tracking-widest text-white">
+      <svg class="h-6 w-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 2v20M4 2v5a3 3 0 0 0 6 0V2M17 2c-2 3-2 7-2 9h4v11M19 2c-1 1-2 2-2 3"/>
+      </svg>
+      ARENA&nbsp;<span class="text-brand">FOODPARK</span>
+    </a>
+
+    <ul class="hidden items-center gap-8 text-sm font-medium text-zinc-300 md:flex">
+      <li><a href="#foodtrucks" class="transition hover:text-brand">Food Trucks</a></li>
+      <li><a href="#kids" class="transition hover:text-brand">Área Kids</a></li>
+      <li><a href="#bar" class="transition hover:text-brand">Arena Bar</a></li>
+      <li>
+        <a href="#visite" class="rounded-full bg-brand px-5 py-2 font-semibold text-zinc-950 transition hover:bg-amber-300">
+          Visite-nos
+        </a>
+      </li>
+    </ul>
+
+    <button id="menuBtn" class="md:hidden rounded-lg border border-zinc-700 p-2 text-zinc-300 hover:text-brand" aria-label="Abrir menu">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <div id="mobileMenu" class="hidden border-t border-zinc-800 bg-coal/95 backdrop-blur md:hidden">
+    <ul class="space-y-1 px-6 py-4 text-sm font-medium text-zinc-300">
+      <li><a href="#foodtrucks" class="block rounded-lg px-3 py-2 hover:bg-zinc-900 hover:text-brand">Food Trucks</a></li>
+      <li><a href="#kids" class="block rounded-lg px-3 py-2 hover:bg-zinc-900 hover:text-brand">Área Kids</a></li>
+      <li><a href="#bar" class="block rounded-lg px-3 py-2 hover:bg-zinc-900 hover:text-brand">Arena Bar</a></li>
+      <li><a href="#visite" class="block rounded-lg bg-brand px-3 py-2 font-semibold text-zinc-950">Visite-nos</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO (parallax) ============ -->
+<section class="parallax-hero relative flex min-h-screen items-center justify-center">
+  <div class="relative z-10 mx-auto max-w-3xl px-6 pt-24 pb-16 text-center">
+    <span class="inline-block rounded-full border border-brand/40 bg-zinc-950/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-brand">
+      Gastronomia · Lazer · Comunidade
+    </span>
+    <h1 class="mt-6 font-display text-6xl leading-none tracking-wide text-white sm:text-7xl md:text-8xl">
+      ARENA <span class="text-brand">FOODPARK</span>
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-200 md:text-lg">
+      Mais do que um lugar para comer: o Arena Foodpark é o novo ponto de encontro da cidade.
+      Seis food trucks exclusivos, área kids completa e o Arena Bar, tudo em um espaço aberto,
+      acolhedor e cheio de energia para você viver bons momentos com quem você gosta.
+    </p>
+    <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <a href="#foodtrucks" class="rounded-full bg-brand px-8 py-3 font-semibold text-zinc-950 shadow-lg shadow-amber-400/20 transition hover:bg-amber-300">
+        Conheça o espaço
+      </a>
+      <a href="#visite" class="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:border-brand hover:text-brand">
+        Como chegar
+      </a>
+    </div>
+  </div>
+
+  <a href="#foodtrucks" aria-label="Rolar para baixo" class="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-zinc-300 transition hover:text-brand">
+    <svg class="h-8 w-8 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </a>
+</section>
+
+<!-- ============ TÓPICO 1: FOOD TRUCKS (imagem | texto) ============ -->
+<section id="foodtrucks" class="py-20 md:py-28">
+  <div class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+    <div>
+      <img
+        src="https://image.qwenlm.ai/public_source/4b900bbd-2a0f-42e9-8392-304101c17e68/17bfef36f-07c7-442b-b1b5-74474bb24a70.png"
+        alt="Fileira de food trucks do Arena Foodpark"
+        class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
+        loading="lazy"
+      />
+    </div>
+    <div>
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand">Direto da chapa</span>
+      <h2 class="mt-3 font-display text-4xl tracking-wide text-white md:text-5xl">
+        SEIS FOOD TRUCKS, UM SÓ LUGAR
+      </h2>
+      <p class="mt-4 leading-relaxed text-zinc-400">
+        Variedade de verdade para agradar todo mundo: são seis operações fixas, cada uma
+        especializada no que faz de melhor. Do smash burger à pizza de fermentação natural,
+        do mexicano autêntico ao churrasco fogo de chão, sem esquecer do pastel de feira
+        e das sobremesas para fechar a noite.
+      </p>
+      <ul class="mt-8 grid grid-cols-2 gap-3 text-sm font-medium">
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🍔 Burger</li>
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🍕 Pizza</li>
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🌮 Mexicano</li>
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🥩 Churrasco</li>
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🥟 Pastel</li>
+        <li class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5">🍨 Sobremesas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÓPICO 2: ÁREA KIDS (texto | imagem) ============ -->
+<section id="kids" class="bg-zinc-900/40 py-20 md:py-28">
+  <div class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+    <div class="md:order-2">
+      <img
+        src="https://image.qwenlm.ai/public_source/4b900bbd-2a0f-42e9-8392-304101c17e68/180ee37cd-cd90-4277-b22a-8e7db2e5bf.png"
+        alt="Crianças brincando na área kids do Arena Foodpark"
+        class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
+        loading="lazy"
+      />
+    </div>
+    <div class="md:order-1">
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand">Diversão garantida</span>
+      <h2 class="mt-3 font-display text-4xl tracking-wide text-white md:text-5xl">
+        ÁREA KIDS PARA A FAMÍLIA INTEIRA
+      </h2>
+      <p class="mt-4 leading-relaxed text-zinc-400">
+        Enquanto você aproveita a noite, a criançada tem um espaço só dela: brinquedos
+        infláveis, escorregadores e área cercada com monitoramento, para os pequenos
+        gastarem energia com segurança e você relaxar tranquilamente.
+      </p>
+      <ul class="mt-8 space-y-3 text-sm text-zinc-300">
+        <li class="flex items-center gap-3">
+          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">✓</span>
+          Espaço cercado e monitorado
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">✓</span>
+          Brinquedos para diferentes idades
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">✓</span>
+          Ao lado das mesas, tudo à vista
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TÓPICO 3: ARENA BAR (imagem | texto) ============ -->
+<section id="bar" class="py-20 md:py-28">
+  <div class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+    <div>
+      <img
+        src="https://image.qwenlm.ai/public_source/4b900bbd-2a0f-42e9-8392-304101c17e68/196c1eea0-9d06-442b-b1eb-f5d6cfc90864.png"
+        alt="Balcão do Arena Bar à noite"
+        class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
+        loading="lazy"
+      />
+    </div>
+    <div>
+      <span class="text-xs font-semibold uppercase tracking-[0.25em] text-brand">Saúde!</span>
+      <h2 class="mt-3 font-display text-4xl tracking-wide text-white md:text-5xl">
+        ARENA BAR, O CORAÇÃO DA NOITE
+      </h2>
+      <p class="mt-4 leading-relaxed text-zinc-400">
+        Chopp trincando, drinks autorais, refrigerantes artesanais e opções sem álcool.
+        O Arena Bar é o ponto de encontro do foodpark: balcão em madeira, luz quente e
+        aquele clima de fim de tarde que se estende noite adentro.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3 text-sm font-medium">
+        <span class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2">🍺 Chopp artesanal</span>
+        <span class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2">🍹 Drinks autorais</span>
+        <span class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2">🥤 Sem álcool</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="visite" class="pb-20 md:pb-28">
+  <div class="reveal mx-auto max-w-6xl px-6">
+    <div class="relative overflow-hidden rounded-3xl bg-brand px-8 py-14 text-center text-zinc-950 md:px-16 md:py-20">
+      <div class="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/20 blur-2xl"></div>
+      <div class="pointer-events-none absolute -bottom-12 -right-12 h-48 w-48 rounded-full bg-zinc-950/10 blur-2xl"></div>
+
+      <h2 class="font-display text-5xl tracking-wide md:text-6xl">BATEU A FOME?</h2>
+      <p class="mx-auto mt-4 max-w-xl font-medium text-zinc-800">
+        O Arena Foodpark abre de terça a domingo, das 17h às 23h.
+        Entrada gratuita, espaço pet friendly e música boa te esperando.
+        Chama a galera e vem!
+      </p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="#" class="rounded-full bg-zinc-950 px-8 py-3.5 font-semibold text-white shadow-lg transition hover:bg-zinc-800">
+          Como chegar
+        </a>
+        <a href="#" class="rounded-full border-2 border-zinc-950 px-8 py-3.5 font-semibold text-zinc-950 transition hover:bg-zinc-950 hover:text-white">
+          Ver cardápios
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-zinc-800 bg-zinc-950 py-14">
+  <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-3">
+    <div>
+      <a href="#" class="flex items-center gap-2 font-display text-2xl tracking-widest text-white">
+        <svg class="h-6 w-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 2v20M4 2v5a3 3 0 0 0 6 0V2M17 2c-2 3-2 7-2 9h4v11M19 2c-1 1-2 2-2 3"/>
+        </svg>
+        ARENA&nbsp;<span class="text-brand">FOODPARK</span>
+      </a>
+      <p class="mt-4 text-sm leading-relaxed text-zinc-500">
+        Gastronomia, lazer e comunidade em um só lugar.
+        O ponto de encontro que a cidade esperava.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-[0.25em] text-brand">Funcionamento</h3>
+      <ul class="mt-4 space-y-2 text-sm text-zinc-400">
+        <li class="flex justify-between gap-6"><span>Terça a quinta</span><span>17h – 22h</span></li>
+        <li class="flex justify-between gap-6"><span>Sexta e sábado</span><span>17h – 23h</span></li>
+        <li class="flex justify-between gap-6"><span>Domingo</span><span>16h – 22h</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-xs font-semibold uppercase tracking-[0.25em] text-brand">Contato</h3>
+      <ul class="mt-4 space-y-3 text-sm text-zinc-400">
+        <li class="flex items-center gap-3">
+          <svg class="h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Av. das Arenas, 1000 – Centro
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          ola@arenafoodpark.com.br
+        </li>
+        <li class="flex items-center gap-3">
+          <svg class="h-4 w-4 shrink-0 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          @arenafoodpark
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mx-auto mt-12 max-w-6xl border-t border-zinc-800 px-6 pt-6 text-center text-xs text-zinc-600">
+    © 2026 Arena Foodpark. Todos os direitos reservados.
+  </div>
+</footer>
+
+<script>
+  // Header com fundo ao rolar
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Menu mobile
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => mobileMenu.classList.add('hidden'))
+  );
+
+  // Revelar seções ao rolar
+  const io = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
+    }),
+    { threshold: 0.15 }
+  );
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
