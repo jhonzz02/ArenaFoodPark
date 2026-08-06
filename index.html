@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/index.css"
     />
-    
+
     <script>
       tailwind.config = {
         theme: {
@@ -34,6 +34,10 @@
     <style>
       body {
         font-family: "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
       }
 
       /* Parallax do hero */
@@ -139,10 +143,11 @@
           </li>
           <li>
             <a
-              href="#visite"
+              href="https://wa.me/5571981197523"
               class="rounded-full bg-brand px-5 py-2 font-semibold text-zinc-950 transition hover:bg-amber-300"
+              target="_blank"
             >
-              Visite-nos
+              Contato
             </a>
           </li>
         </ul>
@@ -228,18 +233,18 @@
         <div
           class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <a
-            href="#foodtrucks"
+          <span
+            href=""
             class="rounded-full bg-brand px-8 py-3 font-semibold text-zinc-950 shadow-lg shadow-amber-400/20 transition hover:bg-amber-300"
           >
             Conheça o espaço
-          </a>
-          <a
+          </span>
+          <!--      <a
             href="#visite"
             class="rounded-full border border-white/30 px-8 py-3 font-semibold text-white transition hover:border-brand hover:text-brand"
           >
             Como chegar
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -265,7 +270,7 @@
     <!-- ============ TÓPICO 1: FOOD TRUCKS (imagem | texto) ============ -->
     <section id="foodtrucks" class="py-20 md:py-28">
       <div
-        class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2"
+        class="reveal mx-auto flex flex-col-reverse md:grid md:grid-cols-2 max-w-6xl items-center gap-12 px-6"
       >
         <div>
           <img
@@ -292,33 +297,37 @@
             fogo de chão, sem esquecer do pastel de feira e das sobremesas para
             fechar a noite.
           </p>
-          <ul class="mt-8 grid grid-cols-2 gap-3 text-sm font-medium">
-            <li
-              class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5"
+          <div class="mt-8 flex flex-wrap gap-3 text-sm font-medium">
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
             >
               Hamburguer
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5"
+            </span>
+
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
             >
               Pizza
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5"
+            </span>
+
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
             >
               Espetinho
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5"
+            </span>
+
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
             >
               Açaí / Sorvete / Churros
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/60 px-4 py-2.5"
+            </span>
+
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
             >
               Bar
-            </li>
-          </ul>
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -326,7 +335,7 @@
     <!-- ============ TÓPICO 2: ÁREA KIDS (texto | imagem) ============ -->
     <section id="kids" class="bg-black py-20 md:py-28">
       <div
-        class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2"
+        class="reveal mx-auto flex flex-col-reverse md:grid md:grid-cols-2 max-w-6xl items-center gap-12 px-6"
       >
         <div class="md:order-2">
           <img
@@ -382,11 +391,11 @@
     <!-- ============ TÓPICO 3: ARENA BAR (imagem | texto) ============ -->
     <section id="bar" class="py-20 md:py-28">
       <div
-        class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2"
+        class="reveal mx-auto flex flex-col-reverse md:grid md:grid-cols-2 max-w-6xl items-center gap-12 px-6"
       >
         <div>
           <img
-            src="https://image.qwenlm.ai/public_source/4b900bbd-2a0f-42e9-8392-304101c17e68/196c1eea0-9d06-442b-b1eb-f5d6cfc90864.png"
+            src="5.png"
             alt="Balcão do Arena Bar à noite"
             class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
             loading="lazy"
@@ -411,15 +420,31 @@
           <div class="mt-8 flex flex-wrap gap-3 text-sm font-medium">
             <span
               class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
-              >🍺 Chopp artesanal</span
+              >Chopp artesanal</span
             >
             <span
               class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
-              >🍹 Drinks autorais</span
+              >Drinks autorais</span
             >
             <span
               class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
-              >🥤 Sem álcool</span
+              >Cerveja</span
+            >
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
+              >Refrigerante</span
+            >
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
+              >Água</span
+            >
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
+              >Suco</span
+            >
+            <span
+              class="rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-2"
+              >Drinks sem álcool</span
             >
           </div>
         </div>
@@ -429,11 +454,11 @@
     <!-- ============ TÓPICO 4: Eventos ============ -->
     <section id="eventos" class="bg-black py-20 md:py-28">
       <div
-        class="reveal mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2"
+        class="reveal mx-auto flex flex-col-reverse md:grid md:grid-cols-2 max-w-6xl items-center gap-12 px-6"
       >
         <div class="md:order-2">
           <img
-            src="3.png"
+            src="4.png"
             alt="Eventos musicais no Arena Foodpark"
             class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
             loading="lazy"
@@ -462,22 +487,36 @@
           </p>
 
           <ul class="mt-8 space-y-3 text-sm text-zinc-300">
-            
-            <li class="flex items-center gap-3">   <span
+            <li class="flex items-center gap-3">
+              <span
                 class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand"
-                >✓</span>Dia do Samba</li>
+                >✓</span
+              >Dia do Samba
+            </li>
 
-            <li class="flex items-center gap-3">   <span
+            <li class="flex items-center gap-3">
+              <span
                 class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand"
-                >✓</span> Dia do Eletrônico</li>
+                >✓</span
+              >
+              Dia do Eletrônico
+            </li>
 
-            <li class="flex items-center gap-3">   <span
+            <li class="flex items-center gap-3">
+              <span
                 class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand"
-                >✓</span> Dia do Pagode</li>
+                >✓</span
+              >
+              Dia do Pagode
+            </li>
 
-            <li class="flex items-center gap-3">   <span
+            <li class="flex items-center gap-3">
+              <span
                 class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand"
-                >✓</span> Dia do Sertanejo</li>
+                >✓</span
+              >
+              Dia do Sertanejo
+            </li>
           </ul>
         </div>
       </div>
@@ -507,17 +546,17 @@
           <div
             class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            <a
+            <!--   <a
               href="#"
               class="rounded-full bg-zinc-950 px-8 py-3.5 font-semibold text-white shadow-lg transition hover:bg-zinc-800"
             >
               Como chegar
-            </a>
+            </a> -->
             <a
-              href="#"
+              href="https://wa.me/5571981197523"
               class="rounded-full border-2 border-zinc-950 px-8 py-3.5 font-semibold text-zinc-950 transition hover:bg-zinc-950 hover:text-white"
             >
-              Ver cardápios
+              Contate-nos
             </a>
           </div>
         </div>
@@ -526,8 +565,10 @@
 
     <!-- ============ FOOTER ============ -->
     <footer class="border-t border-zinc-800 bg-zinc-950 py-14">
-      <div class="mx-auto grid max-w-6xl gap-10 px-6 md:grid-cols-3">
-        <div>
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-start"
+      >
+        <div class="flex-1">
           <a
             href="#"
             class="flex items-center gap-2 font-display text-2xl tracking-widest text-white"
@@ -553,79 +594,116 @@
           </p>
         </div>
 
-        <div>
+        <div class="shrink-0">
           <h3
             class="text-xs font-semibold uppercase tracking-[0.25em] text-brand"
           >
             Funcionamento
           </h3>
-          <ul class="mt-4 space-y-2 text-sm text-zinc-400">
-            <li class="flex justify-between gap-6">
-              <span>Terça a quinta</span><span>17h – 22h</span>
-            </li>
-            <li class="flex justify-between gap-6">
-              <span>Sexta e sábado</span><span>17h – 23h</span>
-            </li>
-            <li class="flex justify-between gap-6">
-              <span>Domingo</span><span>16h – 22h</span>
-            </li>
-          </ul>
+          <div class="flex">
+            <div class="flex flex-col">
+              <span>Terça a quinta</span>
+              <span>Sexta e sábado</span>
+              <span>Domingo</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="ml-6">17h – 22h</span>
+              <span class="ml-6">17h – 23h</span>
+              <span class="ml-6">16h – 22h</span>
+            </div>
+          </div>
         </div>
 
-        <div>
+        <div class="flex-1">
           <h3
             class="text-xs font-semibold uppercase tracking-[0.25em] text-brand"
           >
             Contato
           </h3>
-          <ul class="mt-4 space-y-3 text-sm text-zinc-400">
-            <li class="flex items-center gap-3">
-              <svg
-                class="h-4 w-4 shrink-0 text-brand"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+
+          <div class="mt-4 space-y-4 text-sm">
+            <div
+              class="flex flex-wrap items-center gap-x-6 gap-y-2 max-md:flex-col max-md:items-start"
+            >
+              <a
+                href="mailto:rodrigo@r4scapital.com"
+                class="flex items-center gap-2 text-zinc-400 transition hover:text-white"
               >
-                <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Av. das Arenas, 1000 – Centro
-            </li>
-            <li class="flex items-center gap-3">
-              <svg
-                class="h-4 w-4 shrink-0 text-brand"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                <svg
+                  class="h-4 w-4 shrink-0 text-brand"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+                rodrigo@r4scapital.com
+              </a>
+
+              <a
+                href="https://wa.me/5571996688636"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 text-zinc-400 transition hover:text-white"
               >
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-10 6L2 7" />
-              </svg>
-              ola@arenafoodpark.com.br
-            </li>
-            <li class="flex items-center gap-3">
-              <svg
-                class="h-4 w-4 shrink-0 text-brand"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                <svg
+                  class="h-4 w-4 shrink-0 text-brand"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.46 0 .08 5.37.08 11.98c0 2.11.55 4.18 1.59 6L0 24l6.18-1.62a11.96 11.96 0 0 0 5.89 1.5h.01c6.61 0 11.99-5.38 11.99-11.99 0-3.2-1.25-6.21-3.55-8.41Z"
+                  />
+                </svg>
+                +55 71 99668-8636
+              </a>
+            </div>
+
+            <div
+              class="flex flex-wrap items-center gap-x-6 gap-y-2 max-md:flex-col max-md:items-start"
+            >
+              <a
+                href="mailto:thsilvavb@gmail.com"
+                class="flex items-center gap-2 text-zinc-400 transition hover:text-white"
               >
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" />
-              </svg>
-              @arenafoodpark
-            </li>
-          </ul>
+                <svg
+                  class="h-4 w-4 shrink-0 text-brand"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-10 6L2 7" />
+                </svg>
+                thsilvavb@gmail.com
+              </a>
+
+              <a
+                href="https://wa.me/5571981197523"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 text-zinc-400 transition hover:text-white"
+              >
+                <svg
+                  class="h-4 w-4 shrink-0 text-brand"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.46 0 .08 5.37.08 11.98c0 2.11.55 4.18 1.59 6L0 24l6.18-1.62a11.96 11.96 0 0 0 5.89 1.5h.01c6.61 0 11.99-5.38 11.99-11.99 0-3.2-1.25-6.21-3.55-8.41Z"
+                  />
+                </svg>
+                +55 71 98119-7523
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
