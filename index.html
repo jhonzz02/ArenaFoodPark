@@ -395,7 +395,7 @@
       >
         <div>
           <img
-            src="5.png"
+            src="7.jpeg"
             alt="Balcão do Arena Bar à noite"
             class="aspect-[4/3] w-full rounded-2xl object-cover shadow-2xl shadow-black/50 ring-1 ring-zinc-800"
             loading="lazy"
@@ -645,7 +645,7 @@
                 </tr>
                 <tr class="hover:bg-[#FBBF24]/5 transition-colors">
                   <td class="p-4 font-normal text-white">
-                    Custos com Mão de Obra (Experience)
+                    Custos com Mão de Obra
                   </td>
                   <td class="p-4">147.524,53</td>
                 </tr>
@@ -693,8 +693,8 @@
                 >
                   <th class="p-4">Dia</th>
                   <th class="p-4">QTD</th>
-                  <th class="p-4">Ticket Médio (R$)</th>
-                  <th class="p-4">Total/Dia (R$)</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">Total <br> p/Dia (R$)</th>
                 </tr>
               </thead>
               <tbody
@@ -767,8 +767,8 @@
                 >
                   <th class="p-4">Dia</th>
                   <th class="p-4">QTD</th>
-                  <th class="p-4">Ticket Médio (R$)</th>
-                  <th class="p-4">Total/Dia (R$)</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">Total <br> p/Dia (R$)</th>
                 </tr>
               </thead>
               <tbody
@@ -837,8 +837,8 @@
                 >
                   <th class="p-4">Dia</th>
                   <th class="p-4">QTD</th>
-                  <th class="p-4">Ticket Médio (R$)</th>
-                  <th class="p-4">Total/Dia (R$)</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">Total <br> p/Dia (R$)</th>
                 </tr>
               </thead>
               <tbody
@@ -891,37 +891,50 @@
           >
             ❖ Dias de Operação
           </h3>
+
           <div
-            class="overflow-x-auto border border-[#FBBF24]/20 rounded-sm bg-[#FBBF24]/5 w-full"
+            class="border border-[#FBBF24]/20 rounded-sm bg-[#FBBF24]/5 w-full font-sans text-sm"
           >
-            <table
-              class="w-full text-left font-sans text-sm border-collapse min-w-max"
-            >
-              <thead>
-                <tr
-                  class="border-b border-[#FBBF24]/20 bg-[#FBBF24]/5 text-[#FBBF24] uppercase tracking-widest text-[11px] whitespace-nowrap"
-                >
-                  <th class="p-4">Categoria</th>
-                  <th class="p-4">Total Dias</th>
-                  <th class="p-4">Jogos</th>
-                  <th class="p-4">Eventos</th>
-                  <th class="p-4">Operacionais</th>
-                </tr>
-              </thead>
-              <tbody
-                class="divide-y divide-[#FBBF24]/10 text-white/90 font-light whitespace-nowrap"
+            <div class="grid grid-cols-2 divide-x divide-[#FBBF24]/10">
+              <div
+                class="p-4 uppercase tracking-widest text-[11px] text-[#FBBF24] bg-[#FBBF24]/5"
               >
-                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
-                  <td class="p-4 font-normal text-white">
-                    Dias de Operação (...)
-                  </td>
-                  <td class="p-4 text-[#FBBF24] font-bold">20</td>
-                  <td class="p-4">3</td>
-                  <td class="p-4">1</td>
-                  <td class="p-4">16</td>
-                </tr>
-              </tbody>
-            </table>
+                Categoria
+              </div>
+              <div
+                class="p-4 uppercase tracking-widest text-[11px] text-[#FBBF24] bg-[#FBBF24]/5"
+              >
+                Dias de Operação (...)
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-2 divide-x divide-[#FBBF24]/10 border-t border-[#FBBF24]/10"
+            >
+              <div class="p-4 text-white/70">Jogos</div>
+              <div class="p-4 text-white/90 font-light">3</div>
+            </div>
+
+            <div
+              class="grid grid-cols-2 divide-x divide-[#FBBF24]/10 border-t border-[#FBBF24]/10"
+            >
+              <div class="p-4 text-white/70">Eventos</div>
+              <div class="p-4 text-white/90 font-light">1</div>
+            </div>
+
+            <div
+              class="grid grid-cols-2 divide-x divide-[#FBBF24]/10 border-t border-[#FBBF24]/10"
+            >
+              <div class="p-4 text-white/70">Operacionais</div>
+              <div class="p-4 text-white/90 font-light">16</div>
+            </div>
+
+             <div
+              class="grid grid-cols-2 divide-x divide-[#FBBF24]/10 border-t border-[#FBBF24]/10"
+            >
+              <div class="p-4 text-white/70">Total</div>
+              <div class="p-4 text-[#FBBF24] font-bold">20</div>
+            </div>
           </div>
         </div>
       </div>
@@ -944,7 +957,7 @@
             BATEU A FOME?
           </h2>
           <p class="mx-auto mt-4 max-w-xl font-medium text-zinc-800">
-            O Arena Foodpark abre de terça a domingo, das 17h às 23h. Entrada
+            O Arena Foodpark abre de quarta a domingo, das 17h às 23h. Entrada
             gratuita, espaço pet friendly e música boa te esperando. Chama a
             galera e vem!
           </p>
@@ -1006,15 +1019,13 @@
             Funcionamento
           </h3>
           <div class="flex">
-            <div class="flex flex-col">
-              <span>Terça a quinta</span>
-              <span>Sexta e sábado</span>
-              <span>Domingo</span>
+            <div class="flex flex-col mt-4">
+              <span>Quarta a Sexta</span>
+              <span>Sábado e Domingo</span>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col mt-4">
               <span class="ml-6">17h – 22h</span>
-              <span class="ml-6">17h – 23h</span>
-              <span class="ml-6">16h – 22h</span>
+              <span class="ml-6">9h – 22h</span>
             </div>
           </div>
         </div>
