@@ -1,0 +1,224 @@
+    <!-- Projeção Mês 1 ao 3 -->
+        <div class="scroll-anim slide-in-right text-left mb-24">
+          <h3
+            class="font-serif text-xl md:text-2xl text-[#FBBF24] mb-6 border-b border-[#FBBF24]/20 pb-2 uppercase tracking-wider font-bold"
+          >
+            ❖ Projeção de Faturamento (Mês 1 ao 3)
+          </h3>
+          <p class="text-white/70 text-sm font-light mb-6">
+            Estimativa de fluxo de clientes e faturamento diário nos primeiros
+            meses de operação, considerando quinta a domingo.
+          </p>
+          <div
+            class="overflow-x-auto border border-[#FBBF24]/20 rounded-sm bg-[#FBBF24]/5 w-full"
+          >
+            <table
+              class="w-full text-left font-sans text-sm border-collapse min-w-max"
+            >
+              <thead>
+                <tr
+                  class="border-b border-[#FBBF24]/20 bg-[#FBBF24]/5 text-[#FBBF24] uppercase tracking-widest text-[11px] whitespace-nowrap"
+                >
+                  <th class="p-4">Dia</th>
+                  <th class="p-4">QTD</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">
+                    Total <br />
+                    p/Dia (R$)
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="divide-y divide-[#FBBF24]/10 text-white/90 font-light whitespace-nowrap"
+              >
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Quinta-feira</td>
+                  <td class="p-4">40</td>
+                  <td class="p-4">50,00</td>
+                  <td class="p-4">2.000,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sexta-feira</td>
+                  <td class="p-4">75</td>
+                  <td class="p-4">60,00</td>
+                  <td class="p-4">4.500,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sábado</td>
+                  <td class="p-4">75</td>
+                  <td class="p-4">60,00</td>
+                  <td class="p-4">4.500,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Domingo</td>
+                  <td class="p-4">60</td>
+                  <td class="p-4">55,00</td>
+                  <td class="p-4">3.300,00</td>
+                </tr>
+                <tr class="bg-[#FBBF24]/5 font-normal text-white">
+                  <td class="p-4 font-medium text-[#FBBF24]">Média</td>
+                  <td class="p-4">63</td>
+                  <td class="p-4">56,00</td>
+                  <td class="p-4">3.575,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-medium text-[#FBBF24]">TOTAL</td>
+                  <td class="p-4">250</td>
+                  <td class="p-4">225,00</td>
+                  <td class="p-4 text-[#FBBF24] font-bold">14.300,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-white text-sm font-light mt-4">
+            Preço médio unitário estimado:
+            <span class="text-[#FBBF24] font-semibold">R$ 62,06</span>
+          </p>
+        </div>
+    <!-- Projeção Mês 4 ao 9 -->
+        <div class="scroll-anim slide-in-right text-left mb-24">
+          <h3
+            class="font-serif text-xl md:text-2xl text-[#FBBF24] mb-6 border-b border-[#FBBF24]/20 pb-2 uppercase tracking-wider font-bold"
+          >
+            ❖ Projeção de Faturamento (Mês 4 ao 9)
+          </h3>
+          <p class="text-white/70 text-sm font-light mb-6">
+            Curva de crescimento com aumento gradual de fluxo e ticket médio
+            (10% growth), considerando quinta a domingo.
+          </p>
+          <div
+            class="overflow-x-auto border border-[#FBBF24]/20 rounded-sm bg-[#FBBF24]/5 w-full"
+          >
+            <table
+              class="w-full text-left font-sans text-sm border-collapse min-w-max"
+            >
+              <thead>
+                <tr
+                  class="border-b border-[#FBBF24]/20 bg-[#FBBF24]/5 text-[#FBBF24] uppercase tracking-widest text-[11px] whitespace-nowrap"
+                >
+                  <th class="p-4">Dia</th>
+                  <th class="p-4">QTD</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">
+                    Total <br />
+                    p/Dia (R$)
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="divide-y divide-[#FBBF24]/10 text-white/90 font-light whitespace-nowrap"
+              >
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Quinta-feira</td>
+                  <td class="p-4">60</td>
+                  <td class="p-4">55,00</td>
+                  <td class="p-4">3.300,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sexta-feira</td>
+                  <td class="p-4">113</td>
+                  <td class="p-4">66,00</td>
+                  <td class="p-4">7.425,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sábado</td>
+                  <td class="p-4">113</td>
+                  <td class="p-4">66,00</td>
+                  <td class="p-4">7.425,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Domingo</td>
+                  <td class="p-4">90</td>
+                  <td class="p-4">60,50</td>
+                  <td class="p-4">5.445,00</td>
+                </tr>
+                <tr class="bg-[#FBBF24]/5 font-normal text-white">
+                  <td class="p-4 font-medium text-[#FBBF24]">Média</td>
+                  <td class="p-4">94</td>
+                  <td class="p-4">62,00</td>
+                  <td class="p-4">5.898,75</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-medium text-[#FBBF24]">TOTAL</td>
+                  <td class="p-4">375</td>
+                  <td class="p-4">248,00</td>
+                  <td class="p-4 text-[#FBBF24] font-bold">23.595,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+        <!-- Projeção Mês 9 em diante -->
+        <div class="scroll-anim slide-in-left text-left mb-24">
+          <h3
+            class="font-serif text-xl md:text-2xl text-[#FBBF24] mb-6 border-b border-[#FBBF24]/20 pb-2 uppercase tracking-wider font-bold"
+          >
+            ❖ Projeção de Faturamento (Mês 9 em diante)
+          </h3>
+          <p class="text-white/70 text-sm font-light mb-6">
+            Fase de maturação da operação, com fluxo consolidado e ticket médio
+            ajustado (10% growth), considerando quinta a domingo.
+          </p>
+          <div
+            class="overflow-x-auto border border-[#FBBF24]/20 rounded-sm bg-[#FBBF24]/5 w-full"
+          >
+            <table
+              class="w-full text-left font-sans text-sm border-collapse min-w-max"
+            >
+              <thead>
+                <tr
+                  class="border-b border-[#FBBF24]/20 bg-[#FBBF24]/5 text-[#FBBF24] uppercase tracking-widest text-[11px] whitespace-nowrap"
+                >
+                  <th class="p-4">Dia</th>
+                  <th class="p-4">QTD</th>
+                  <th class="p-4">TM (R$)</th>
+                  <th class="p-4">
+                    Total <br />
+                    p/Dia (R$)
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="divide-y divide-[#FBBF24]/10 text-white/90 font-light whitespace-nowrap"
+              >
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Quinta-feira</td>
+                  <td class="p-4">90</td>
+                  <td class="p-4">60,50</td>
+                  <td class="p-4">5.445,00</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sexta-feira</td>
+                  <td class="p-4">169</td>
+                  <td class="p-4">72,60</td>
+                  <td class="p-4">12.251,25</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Sábado</td>
+                  <td class="p-4">169</td>
+                  <td class="p-4">72,60</td>
+                  <td class="p-4">12.251,25</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-normal text-white">Domingo</td>
+                  <td class="p-4">135</td>
+                  <td class="p-4">66,55</td>
+                  <td class="p-4">8.984,25</td>
+                </tr>
+                <tr class="bg-[#FBBF24]/5 font-normal text-white">
+                  <td class="p-4 font-medium text-[#FBBF24]">Média</td>
+                  <td class="p-4">141</td>
+                  <td class="p-4">68,00</td>
+                  <td class="p-4">9.732,94</td>
+                </tr>
+                <tr class="hover:bg-[#FBBF24]/5 transition-colors">
+                  <td class="p-4 font-medium text-[#FBBF24]">TOTAL</td>
+                  <td class="p-4">563</td>
+                  <td class="p-4">272,00</td>
+                  <td class="p-4 text-[#FBBF24] font-bold">38.931,75</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
